@@ -100,6 +100,8 @@ int FrequencyReceiver::getFrequency(std::string phrase)
     	if(o == '	')
     		count++;
     }
+    if(count>4)
+    	return -1;
     for(std::vector<FrequencyHolder>::const_iterator itr = vHolder[count].begin(); itr != vHolder[count].end(); ++itr)
     {
         FrequencyHolder h = (*itr);
