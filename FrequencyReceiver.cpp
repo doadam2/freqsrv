@@ -86,6 +86,8 @@ void FrequencyReceiver::addToMemory(std::string line)
     	if(o == '	')
     		count++;
     }
+    if(count>4)
+    	return;
     vHolder[count].push_back(data);
 }
 
